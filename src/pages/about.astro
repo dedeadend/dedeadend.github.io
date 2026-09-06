@@ -5,7 +5,9 @@ import { about, experience, site } from '../data/site';
 <BaseLayout title="About">
   <div class="container page">
     <header class="page-header about-header">
-      <div class="about-identity"><img src={site.avatar} alt="Ehsan Nasiri" /><div><span class="eyebrow">About · {about.years}</span><h1>Ehsan Nasiri · DeDeadend.</h1><p>{about.title}</p></div></div>
+      <span class="eyebrow">About · {about.years}</span>
+      <h1>Ehsan Nasiri · DeDeadend.</h1>
+      <p>{about.title}</p>
     </header>
 
     <section class="section prose">
