@@ -6,7 +6,7 @@ import { about, experience, site } from '../data/site';
   <div class="container page">
     <header class="page-header about-header">
       <span class="eyebrow">About · {about.years}</span>
-      <h1>Ehsan Nasiri · DeDeadend.</h1>
+      <h1>Ehsan Nasiri.</h1>
       <p>{about.title}</p>
     </header>
 
@@ -23,8 +23,13 @@ import { about, experience, site } from '../data/site';
     </section>
 
     <section class="section skills-section">
-      <div><span class="eyebrow">Core stack</span><h2>Tools I use.</h2><div class="tags">{about.stack.map((item) => <span class="tag">{item}</span>)}</div></div>
+      <div><span class="eyebrow">Programming</span><h2>Languages.</h2><div class="tags">{about.programming.map((item) => <span class="tag">{item}</span>)}</div></div>
+      <div><span class="eyebrow">Android development</span><h2>Platform & UI.</h2><div class="tags">{about.android.map((item) => <span class="tag">{item}</span>)}</div></div>
+    </section>
+
+    <section class="section skills-section">
       <div><span class="eyebrow">Architecture & concurrency</span><h2>How I build.</h2><div class="tags">{about.architecture.map((item) => <span class="tag">{item}</span>)}</div></div>
+      <div><span class="eyebrow">Data & tools</span><h2>Development stack.</h2><div class="tags">{about.data.map((item) => <span class="tag">{item}</span>)}</div></div>
     </section>
 
     <section class="section">
@@ -32,7 +37,7 @@ import { about, experience, site } from '../data/site';
     </section>
 
     <section class="section contact-section">
-      <span class="eyebrow">Connect</span><h2>Ehsan Nasiri · DeDeadend</h2>
+      <span class="eyebrow">Connect</span><h2>Ehsan Nasiri.</h2>
       <p class="contact-email"><a href={`mailto:${site.email}`}>{site.email}</a></p>
       <div class="actions"><a class="button primary" href={site.github}>GitHub</a><a class="button" href={site.telegram}>Telegram</a></div>
     </section>

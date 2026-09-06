@@ -4,7 +4,7 @@ import { projects } from '../../data/site';
 ---
 <BaseLayout title="Projects">
   <div class="container page">
-    <header class="page-header"><span class="eyebrow">Projects · {projects.length}</span><h1>Things I build.</h1><p>Android applications, system tools, and a few projects that explore different parts of the platform.</p></header>
+    <header class="page-header"><span class="eyebrow">Projects · {projects.length}</span><h1>Things I build.</h1><p>Android applications, system tools, and projects that explore different parts of the platform.</p></header>
     <div class="grid project-list">
       {projects.map((project) => <a class="card project-card" href={project.href}>
         <div class="project-card-top"><span class="eyebrow">{project.category}</span><span class="status">● {project.status}</span></div>
@@ -17,6 +17,9 @@ import { projects } from '../../data/site';
       <div><span class="eyebrow">Engineering focus</span><h2>Working close to the platform.</h2></div>
       <div class="prose"><p>These projects cover areas I spend time on: Android UI and architecture, system-level access, Root and Shizuku integration, native tooling, automation, and performance.</p><p>I tend to prefer smaller tools where the architecture supports the product rather than becoming a goal by itself.</p></div>
     </section>
-    <section class="section prose"><span class="eyebrow">Across the stack</span><h2>Application to system.</h2><p>Depending on the project, I work with Kotlin and Compose at the application layer, or C/C++, Python, Bash, Root modules, and Android system interfaces when deeper access is needed.</p></section>
+    <section class="section split-section">
+      <div><span class="eyebrow">Across the stack</span><h2>Application to system.</h2></div>
+      <div class="prose"><p>Depending on the project, I work with Kotlin and Compose at the application layer, or C/C++, Python, Bash, Root modules, and Android system interfaces when deeper access is needed.</p></div>
+    </section>
   </div>
 </BaseLayout>

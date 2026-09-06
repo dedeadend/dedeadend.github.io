@@ -6,8 +6,7 @@ export const site = {
   bio: 'I work on Android applications and tools, with a particular interest in the parts of the platform that sit closer to the system. Some of my projects involve Root, Shizuku, system customization, and performance work.',
   github: 'https://github.com/dedeadend',
   telegram: 'https://t.me/dedeadend',
-  email: 'de2deadend@gmail.com',
-  avatar: 'https://avatars.githubusercontent.com/u/107865626?v=4'
+  email: 'de2deadend@gmail.com'
 };
 
 export const apps = [
@@ -105,9 +104,11 @@ export const about = {
   years: '7 years',
   title: 'Android Software Engineer',
   focus: 'Android development across the stack, with an interest in system layers, Root, Shizuku, performance, and platform customization.',
-  stack: ['Kotlin', 'Java', 'C', 'C++', 'Python', 'Bash', 'Jetpack Compose', 'Android SDK', 'Android NDK', 'Material 3', 'Room', 'SQLite', 'Retrofit', 'Git'],
+  programming: ['Kotlin', 'Java', 'C', 'C++', 'Python', 'Bash'],
+  android: ['Jetpack Compose', 'Android SDK', 'Android NDK', 'Material 3', 'Custom View', 'Background Work', 'Geofencing', 'Location Services', 'Telephony Automation'],
   architecture: ['Clean Architecture', 'MVI', 'MVVM', 'UDF', 'Hilt', 'Coroutines', 'Flow', 'Multithreading'],
-  system: ['Root', 'Shizuku', 'Magisk', 'KernelSU', 'APatch', 'Kernel Tuning', 'Power Management', 'Low Latency Optimization', 'Python Integration'],
+  data: ['Room Database', 'SQLite', 'Retrofit', 'JSON', 'XML', 'Git', 'Android Studio'],
+  system: ['Root Programming', 'Root Module Development', 'Python Integration (Chaquopy)', 'Shizuku', 'Magisk', 'KernelSU', 'APatch', 'Kernel Tuning', 'Power Management', 'Low Latency Optimization', 'Enterprise Customization', 'B2B Solution', 'Deep Learning'],
   languages: ['Persian', 'English', 'Turkish']
 };
 
