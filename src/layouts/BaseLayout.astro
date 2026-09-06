@@ -11,13 +11,14 @@ const { title = site.name, description = site.description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/107865626?v=4" />
+    <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/107865626?v=4" />
     <title>{title} · {site.role}</title>
   </head>
   <body>
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="/">Ehsan</a>
+        <a class="brand" href="/">DeDeadend</a>
         <nav class="nav-links" aria-label="Main navigation">
           <a href="/projects/">Projects</a>
           <a href="/about/">About</a>
@@ -27,7 +28,7 @@ const { title = site.name, description = site.description } = Astro.props;
     <main><slot /></main>
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>© {new Date().getFullYear()} Ehsan</span>
+        <span>© {new Date().getFullYear()} Ehsan Nasiri</span>
         <span><a href={site.github}>GitHub</a> · <a href={site.telegram}>Telegram</a></span>
       </div>
     </footer>
