@@ -5,58 +5,28 @@ const app = apps.find((item) => item.slug === 'killmyapps')!;
 ---
 <BaseLayout title="KillMyApps">
   <div class="container page">
-    <p><a href="/projects/">← Projects</a></p>
-    <header class="page-header">
-      <span class="eyebrow">Android · Open Source · {app.version}</span>
-      <h1>{app.name}</h1>
-      <p>{app.tagline}</p>
+    <p><a class="back-link" href="/projects/">← Projects</a></p>
+    <header class="page-header project-detail-header">
+      <span class="eyebrow">{app.tags.join(' · ')} · {app.version}</span><h1>{app.name}</h1><p>{app.tagline}</p>
       <div class="actions"><a class="button primary" href={app.download}>Download</a><a class="button" href={app.github}>View on GitHub</a></div>
     </header>
 
-    <section class="section prose">
-      <h2>A focused system utility.</h2>
-      <p>{app.description}</p>
-      <p>KillMyApps is designed around a simple idea: when you need to stop an Android app, the action should be immediate and predictable. It avoids becoming a general app manager and keeps the interface centered on termination.</p>
-    </section>
+    <section class="detail-intro"><div class="detail-stat"><strong>Android 8+</strong><span>Minimum version</span></div><div class="detail-stat"><strong>Root / Shizuku</strong><span>Execution layers</span></div><div class="detail-stat"><strong>GPL-3.0</strong><span>Open source</span></div></section>
 
-    <section class="section">
-      <span class="eyebrow">Capabilities</span>
-      <h2>Built for power users.</h2>
-      <div class="grid">
-        <article class="card"><h3>One-tap kill</h3><p>Terminate selected applications quickly without navigating through system settings.</p></article>
-        <article class="card"><h3>Root & Shizuku</h3><p>Use Root or Shizuku as the execution layer, depending on the device and setup.</p></article>
-        <article class="card"><h3>Source-aware selection</h3><p>Work with User, Launchable, and System sources to keep selection flexible while reducing accidental operations.</p></article>
-        <article class="card"><h3>Selection Mode</h3><p>Select exactly the applications you want to terminate instead of relying on a fixed list.</p></article>
-        <article class="card"><h3>Auto Killer</h3><p>Automate app termination for background applications that repeatedly consume resources.</p></article>
-        <article class="card"><h3>Quick access</h3><p>Trigger the utility through Quick Settings and home-screen widgets when speed matters.</p></article>
-      </div>
-    </section>
+    <section class="section prose"><span class="eyebrow">Overview</span><h2>A focused system utility.</h2><p>{app.description}</p><p>KillMyApps is designed around a simple idea: when you need to stop an Android app, the action should be immediate and predictable. It avoids becoming a general app manager and keeps the interface centered on termination.</p></section>
 
-    <section class="section prose">
-      <h2>System-level approach</h2>
-      <p>KillMyApps sits close to Android's process-management layer and uses privileged execution paths instead of trying to simulate termination through the regular application APIs.</p>
-      <p>The project supports both Root and Shizuku, giving users different ways to provide the required system-level access while keeping the application itself lightweight.</p>
-    </section>
+    <section class="section prose"><span class="eyebrow">The problem</span><h2>Background apps should be under your control.</h2><p>Android devices can accumulate applications that keep processes alive, restart in the background, or continue consuming idle resources. For power users, reaching the right system action through standard settings can be slower than the task itself.</p><p>KillMyApps provides a direct, repeatable path for terminating selected applications while keeping the scope intentionally narrow.</p></section>
 
-    <section class="section">
-      <span class="eyebrow">Project details</span>
-      <div class="meta">
-        <div class="meta-row"><span>Version</span><strong>{app.version}</strong></div>
-        <div class="meta-row"><span>Minimum Android</span><strong>{app.minAndroid}</strong></div>
-        <div class="meta-row"><span>License</span><strong>{app.license}</strong></div>
-        <div class="meta-row"><span>Execution</span><strong>Root / Shizuku</strong></div>
-        <div class="meta-row"><span>Status</span><strong>{app.status}</strong></div>
-      </div>
-    </section>
+    <section class="section"><span class="eyebrow">Approach</span><h2>Built around direct execution.</h2><div class="grid"><article class="card"><h3>Root & Shizuku</h3><p>Privileged execution through Root or Shizuku keeps the app focused on the actual system operation instead of workarounds.</p></article><article class="card"><h3>Source-aware selection</h3><p>User, Launchable, and System sources make selection flexible while helping users avoid accidental operations.</p></article><article class="card"><h3>Selection Mode</h3><p>Choose exactly which applications should be terminated rather than relying on a fixed or opaque list.</p></article><article class="card"><h3>Automation</h3><p>Auto Killer handles recurring background processes for users who want consistent resource control.</p></article><article class="card"><h3>Quick access</h3><p>Quick Settings Tile and home-screen widgets make the action available without opening a full workflow.</p></article><article class="card"><h3>Focused UI</h3><p>The interface stays lightweight and task-oriented instead of growing into a general-purpose app manager.</p></article></div></section>
 
-    <section class="section prose">
-      <h2>Why it exists</h2>
-      <p>Persistent background processes can consume memory, battery, and other idle resources. KillMyApps provides a direct tool for users who want explicit control over which applications are allowed to keep running.</p>
-      <p>The product principle is deliberately narrow: fast execution, clear control, and no unnecessary management features.</p>
-    </section>
+    <section class="section prose"><span class="eyebrow">System integration</span><h2>Where Android meets the tool.</h2><p>The project sits close to Android's process-management layer and relies on privileged execution paths for operations that are intentionally outside the normal application sandbox.</p><p>Supporting both Root and Shizuku gives users two execution models while allowing the same product experience to remain simple and predictable.</p></section>
 
-    <section class="section">
-      <div class="actions"><a class="button primary" href={app.download}>Get KillMyApps</a><a class="button" href={app.github}>Explore the source</a></div>
-    </section>
+    <section class="section"><span class="eyebrow">Release history</span><h2>How it evolved.</h2><div class="release-list"><div><strong>v1.5</strong><span>Auto Killer, 1×1 and 1×3 widgets, Shizuku UserService/AIDL work, Android 17 support, UI and performance improvements.</span></div><div><strong>v1.4</strong><span>Quick Settings Tile, Selection Mode, animation controls, stable Shizuku integration, filtering and performance work.</span></div><div><strong>v1.3</strong><span>Shizuku support and Killer Mode, expanding the execution and control model.</span></div><div><strong>v1.0.0</strong><span>First stable release and the foundation of the focused app-killing workflow.</span></div></div></section>
+
+    <section class="section prose"><span class="eyebrow">Design decisions</span><h2>Keep it small. Keep it fast.</h2><p>A recurring product decision is to resist features that turn KillMyApps into a full app manager. Profiles and preset systems, for example, add state across widgets, Quick Settings, shortcuts, and selection UI without improving the core action enough to justify that complexity.</p><p>The goal is a tool that users can open, trigger, and leave alone—while still offering enough system-level control for advanced Android setups.</p></section>
+
+    <section class="section"><span class="eyebrow">What's next</span><h2>More control, without more clutter.</h2><p class="muted-copy">Upcoming work includes Kill Level, a redesigned animated Toast, revised animations, and a rewritten Auto Killer moving from experimental behavior toward a stable implementation.</p></section>
+
+    <section class="section"><div class="actions"><a class="button primary" href={app.download}>Get KillMyApps</a><a class="button" href={app.github}>Explore the source</a></div></section>
   </div>
 </BaseLayout>
