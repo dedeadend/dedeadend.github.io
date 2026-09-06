@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { projects } from '../../data/site';
+const project = projects.find((item) => item.slug === 'dterminal')!;
+---
+<BaseLayout title="DTerminal">
+  <div class="container page">
+    <p><a class="back-link" href="/projects/">← Projects</a></p>
+    <header class="page-header project-detail-header"><span class="eyebrow">{project.category} · {project.tags.join(' · ')}</span><h1>{project.name}</h1><p>{project.description}</p><div class="actions"><a class="button primary" href={project.github}>View on GitHub</a></div></header>
+    <section class="detail-intro"><div class="detail-stat"><strong>Python 3.13</strong><span>Embedded runtime</span></div><div class="detail-stat"><strong>Clean + MVI</strong><span>Architecture</span></div><div class="detail-stat"><strong>Room</strong><span>Persistence</span></div></section>
+    <section class="section prose"><span class="eyebrow">Overview</span><h2>A terminal that feels native to Android.</h2><p>DTerminal is a modern Android terminal emulator built to combine standard shell execution, root access, and an embedded Python environment in one focused tool.</p><p>The project goes beyond displaying a shell: it treats commands, scripts, runtime packages, history, and application state as first-class Android features.</p></section>
+    <section class="section"><span class="eyebrow">Architecture</span><h2>Structured for long-term iteration.</h2><div class="grid"><article class="card"><h3>Clean Architecture</h3><p>Separates UI, domain behavior, and data concerns so terminal features can evolve without coupling the whole application.</p></article><article class="card"><h3>MVI + UDF</h3><p>The original MVVM design evolved toward MVI and unidirectional data flow for clearer state and side-effect management.</p></article><article class="card"><h3>Embedded Python</h3><p>Chaquopy provides a Python 3.13 runtime directly on the device, extending the terminal beyond the standard shell environment.</p></article><article class="card"><h3>Room Database</h3><p>Scripts and command history are persisted locally, making repeated workflows practical without external services.</p></article></div></section>
+    <section class="section prose"><span class="eyebrow">Python tooling</span><h2>Package management on-device.</h2><p>DTerminal includes a runtime pip package manager for installing pure-Python packages from PyPI directly on the device. This turns the embedded runtime into a usable environment rather than a static interpreter.</p></section>
+    <section class="section prose"><span class="eyebrow">Technical challenges</span><h2>Bridging two execution worlds.</h2><p>The interesting part of DTerminal is the boundary between Android's application environment and a real command-line runtime. The project has to keep terminal behavior responsive while coordinating process execution, persistent state, Python integration, and Android lifecycle concerns.</p><p>That combination makes architecture and concurrency decisions important: state needs to stay predictable while long-running work remains off the UI thread.</p></section>
+    <section class="section"><span class="eyebrow">Stack</span><div class="tags">{['Kotlin','Jetpack Compose','Android SDK','Python 3.13','Chaquopy','Room','Hilt','Coroutines','Flow','MVI','UDF','Clean Architecture'].map((tag) => <span class="tag">{tag}</span>)}</div></section>
+    <section class="section"><div class="actions"><a class="button primary" href={project.github}>Explore the source</a><a class="button" href="/projects/">More projects</a></div></section>
+  </div>
+</BaseLayout>
