@@ -19,7 +19,6 @@ const { title = site.name, description = site.description } = Astro.props;
       <div class="container nav">
         <a class="brand" href="/">Ehsan</a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="/apps/">Apps</a>
           <a href="/projects/">Projects</a>
           <a href="/about/">About</a>
         </nav>
@@ -29,7 +28,7 @@ const { title = site.name, description = site.description } = Astro.props;
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© {new Date().getFullYear()} Ehsan</span>
-        <span><a href={site.github}>GitHub</a> · <a href={site.email}>Email</a></span>
+        <span><a href={site.github}>GitHub</a> · <a href={site.telegram}>Telegram</a></span>
       </div>
     </footer>
   </body>
