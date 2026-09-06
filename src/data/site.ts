@@ -37,6 +37,7 @@ export const projects = [
     featured: true,
     status: 'Active',
     category: 'Android Utility',
+    github: 'https://github.com/dedeadend/KillMyApps',
     tags: ['Android', 'Root', 'Shizuku', 'Open Source']
   },
   {
@@ -64,6 +65,41 @@ export const projects = [
     tags: ['Root', 'Magisk', 'KernelSU', 'APatch']
   }
 ];
+
+export const projectDetails = {
+  dterminal: {
+    eyebrow: 'Android Tool · Terminal',
+    title: 'DTerminal',
+    summary: 'A modern Android terminal that combines native shell execution with an embedded Python runtime.',
+    overview: 'DTerminal is built for developers and power users who want a capable terminal environment directly on Android. The project combines ordinary shell commands, root-capable execution, persistent history, and a real Python runtime without making the application feel like a desktop terminal port.',
+    problem: 'Android provides shell access, but the developer experience around it can be fragmented. A useful mobile terminal needs more than a command prompt: it needs persistent state, package management, script storage, predictable architecture, and a UI that works naturally on a touch device.',
+    approach: [
+      ['Native shell access', 'Run standard Android shell commands while keeping the execution flow simple and observable.'],
+      ['Embedded Python', 'Bundle Python 3.13 through Chaquopy so scripts can run on-device without a separate environment.'],
+      ['Runtime packages', 'Provide a pip-style flow for installing pure-Python packages from PyPI at runtime.'],
+      ['Persistent workspace', 'Use Room for script and command-history storage so useful terminal state survives sessions.']
+    ],
+    architecture: 'The project evolved from MVVM toward MVI with Unidirectional Data Flow under Clean Architecture. Hilt handles dependency injection while Coroutines and Flow keep asynchronous shell, database, and runtime operations manageable.',
+    system: 'DTerminal sits between the normal Android application layer and the device shell. That makes execution boundaries, threading, process lifecycle, and privileged access important parts of the engineering rather than implementation details hidden behind a standard SDK abstraction.',
+    next: 'The direction is to keep the terminal extensible while preserving a focused mobile workflow: fast startup, predictable command execution, useful scripting, and a clean separation between UI state and execution state.'
+  },
+  evilfont: {
+    eyebrow: 'System Module · Root',
+    title: 'EvilFont',
+    summary: 'A systemless font and emoji module for Magisk, KernelSU, and APatch.',
+    overview: 'EvilFont provides a non-destructive way to customize Android typography and emoji presentation without directly modifying the system partition. It targets rooted devices where system-level customization is part of the normal workflow.',
+    problem: 'System customization often creates a trade-off between flexibility and safety. Replacing framework resources directly can make updates and recovery harder, while a good root module should be reversible, predictable, and easy to install.',
+    approach: [
+      ['Systemless deployment', 'Overlay the required system resources through supported root frameworks instead of changing the real system partition.'],
+      ['Multiple root platforms', 'Support Magisk, KernelSU, and APatch so the module fits different modern Android root setups.'],
+      ['Interactive installer', 'Use a volume-key-driven CLI installer so users can select fonts, emojis, or both during installation.'],
+      ['Focused customization', 'Keep the module centered on typography and emoji changes rather than becoming a general customization bundle.']
+    ],
+    architecture: 'The implementation favors a small module structure with explicit installation choices and minimal persistent state. The installer experience is designed for recovery and root environments where keyboard input may not be available.',
+    system: 'The project operates at the root/module layer rather than the application sandbox. The core challenge is preserving the systemless contract: resources are swapped dynamically while the underlying system partition remains untouched.',
+    next: 'Future work can continue improving compatibility, installer ergonomics, and resource coverage while keeping the module reversible and intentionally narrow in scope.'
+  }
+};
 
 export const about = {
   years: '7 years',
