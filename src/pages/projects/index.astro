@@ -4,19 +4,19 @@ import { projects } from '../../data/site';
 ---
 <BaseLayout title="Projects">
   <div class="container page">
-    <header class="page-header"><span class="eyebrow">Selected work · {projects.length} projects</span><h1>Things I build.</h1><p>Android software, system tools, and experiments built around useful results, direct control, and maintainable engineering.</p></header>
+    <header class="page-header"><span class="eyebrow">Projects · {projects.length}</span><h1>Things I build.</h1><p>Android applications, system tools, and a few projects that explore different parts of the platform.</p></header>
     <div class="grid project-list">
       {projects.map((project) => <a class="card project-card" href={project.href}>
         <div class="project-card-top"><span class="eyebrow">{project.category}</span><span class="status">● {project.status}</span></div>
         <h2>{project.name}</h2><p>{project.description}</p>
         <div class="tags">{project.tags.map((tag) => <span class="tag">{tag}</span>)}</div>
-        <div class="project-link">View case study →</div>
+        <div class="project-link">View details →</div>
       </a>)}
     </div>
     <section class="section split-section">
-      <div><span class="eyebrow">Engineering focus</span><h2>Close to the platform.</h2></div>
-      <div class="prose"><p>These projects reflect the areas I spend the most time in: modern Android UI and architecture, system-level access, Root and Shizuku integration, native tooling, automation, and performance-focused software.</p><p>I prefer small, purposeful tools where the architecture serves the product instead of becoming the product.</p></div>
+      <div><span class="eyebrow">Engineering focus</span><h2>Working close to the platform.</h2></div>
+      <div class="prose"><p>These projects cover areas I spend time on: Android UI and architecture, system-level access, Root and Shizuku integration, native tooling, automation, and performance.</p><p>I tend to prefer smaller tools where the architecture supports the product rather than becoming a goal by itself.</p></div>
     </section>
-    <section class="section prose"><span class="eyebrow">Across the stack</span><h2>Application to system.</h2><p>My work moves between Kotlin and Compose at the application layer and C/C++, Python, Bash, Root modules, and Android system interfaces when a project needs deeper control. The common thread is understanding the platform well enough to choose the simplest layer that solves the problem.</p></section>
+    <section class="section prose"><span class="eyebrow">Across the stack</span><h2>Application to system.</h2><p>Depending on the project, I work with Kotlin and Compose at the application layer, or C/C++, Python, Bash, Root modules, and Android system interfaces when deeper access is needed.</p></section>
   </div>
 </BaseLayout>
