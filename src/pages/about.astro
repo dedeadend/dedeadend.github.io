@@ -11,14 +11,14 @@ import { about, experience, site } from '../data/site';
     </header>
 
     <section class="section prose">
-      <span class="eyebrow">About me</span><h2>Android from the system layer up.</h2>
+      <span class="eyebrow">About me</span><h2>Android development, from apps to system tools.</h2>
       <p>{site.bio}</p>
-      <p>My work spans application development and the parts of Android that sit closer to the platform: Root, Shizuku, system customization, performance tuning, background behavior, and tools that need direct control over the device.</p>
-      <p>I care about software that is fast, predictable, maintainable, and focused on solving a real problem rather than adding complexity for its own sake.</p>
+      <p>My work includes application development as well as parts of Android that sit closer to the platform: Root, Shizuku, system customization, performance, background behavior, and tools that need more direct access to the device.</p>
+      <p>I generally prefer software that is straightforward to use, easy to maintain, and solves a specific problem without adding unnecessary complexity.</p>
     </section>
 
     <section class="section">
-      <span class="eyebrow">Experience & activities</span><h2>What I've worked on.</h2>
+      <span class="eyebrow">Experience & activities</span><h2>Some things I've worked on.</h2>
       <div class="timeline">{experience.map((item) => <article class="timeline-item"><div class="timeline-dot"></div><div><h3>{item.title}</h3><p>{item.description}</p></div></article>)}</div>
     </section>
 
@@ -28,7 +28,7 @@ import { about, experience, site } from '../data/site';
     </section>
 
     <section class="section">
-      <div class="split-section compact"><div><span class="eyebrow">System & performance</span><h2>Beyond standard Android.</h2></div><div class="tags">{about.system.map((item) => <span class="tag">{item}</span>)}</div></div>
+      <div class="split-section compact"><div><span class="eyebrow">System & performance</span><h2>When the platform matters.</h2></div><div class="tags">{about.system.map((item) => <span class="tag">{item}</span>)}</div></div>
     </section>
 
     <section class="section contact-section">
