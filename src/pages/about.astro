@@ -1,14 +1,39 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { site } from '../data/site';
+import { about, site } from '../data/site';
 ---
 <BaseLayout title="About">
   <div class="container page">
-    <header class="page-header"><span class="eyebrow">About</span><h1>Android, systems, and useful tools.</h1><p>I build Android software with a focus on system-level behavior, performance, and practical UX.</p></header>
-    <section class="prose">
-      <p>My work is centered around small products that solve concrete problems. I prefer focused tools, predictable behavior, and interfaces that stay out of the way.</p>
-      <p>This site is where I keep my apps, projects, and future experiments in one place.</p>
-      <div class="actions"><a class="button primary" href={site.github}>GitHub</a><a class="button" href={site.email}>Email</a></div>
+    <header class="page-header"><span class="eyebrow">About · {about.years}</span><h1>Android Software Engineer.</h1><p>{about.focus}</p></header>
+
+    <section class="section prose">
+      <h2>What I work on</h2>
+      <p>{site.bio}</p>
+      <p>My work spans application development and the parts of Android that sit closer to the platform: Root, Shizuku, system customization, performance tuning, background behavior, and tools that need direct control over the device.</p>
+      <p>I care about software that is fast, predictable, maintainable, and focused on solving a real problem rather than adding complexity for its own sake.</p>
+    </section>
+
+    <section class="section">
+      <span class="eyebrow">Core stack</span>
+      <h2>Tools I use.</h2>
+      <div class="tags">{about.stack.map((item) => <span class="tag">{item}</span>)}</div>
+    </section>
+
+    <section class="section">
+      <span class="eyebrow">Architecture & concurrency</span>
+      <h2>How I build.</h2>
+      <div class="tags">{about.architecture.map((item) => <span class="tag">{item}</span>)}</div>
+    </section>
+
+    <section class="section prose">
+      <h2>Beyond standard Android</h2>
+      <p>I also work with lower-level Android tooling and system components, including NDK-based development, Root modules, Magisk, KernelSU, APatch, and embedded Python runtimes when a project needs capabilities beyond the standard application layer.</p>
+    </section>
+
+    <section class="section">
+      <span class="eyebrow">Find me</span>
+      <h2>Ehsan · DeDeadend</h2>
+      <div class="actions"><a class="button primary" href={site.github}>GitHub</a><a class="button" href={site.telegram}>Telegram</a></div>
     </section>
   </div>
 </BaseLayout>
