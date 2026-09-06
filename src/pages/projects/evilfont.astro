@@ -8,14 +8,13 @@ const detail = projectDetails.evilfont;
   <div class="container page">
     <p><a class="back-link" href="/projects/">← Projects</a></p>
     <header class="page-header project-detail-header"><span class="eyebrow">{detail.eyebrow}</span><h1>{detail.title}</h1><p>{detail.summary}</p><div class="actions"><a class="button primary" href={project.github}>View on GitHub</a></div></header>
-    <section class="detail-intro"><div class="detail-stat"><strong>Systemless</strong><span>Deployment model</span></div><div class="detail-stat"><strong>3 platforms</strong><span>Magisk · KernelSU · APatch</span></div><div class="detail-stat"><strong>CLI</strong><span>Interactive installer</span></div></section>
+    <section class="detail-intro"><div class="detail-stat"><strong>{detail.version}</strong><span>Version</span></div><div class="detail-stat"><strong>Systemless</strong><span>Deployment model</span></div><div class="detail-stat"><strong>14 fonts</strong><span>Persian / Arabic</span></div><div class="detail-stat"><strong>2 Apple emoji</strong><span>iOS 18.4 / macOS 26</span></div></section>
     <section class="section prose"><span class="eyebrow">Overview</span><h2>Systemless font and emoji changes.</h2><p>{detail.overview}</p></section>
     <section class="section prose"><span class="eyebrow">The problem</span><h2>Keeping system changes reversible.</h2><p>{detail.problem}</p></section>
     <section class="section"><span class="eyebrow">Approach</span><h2>The main parts of the module.</h2><div class="grid">{detail.approach.map(([title, text]) => <article class="card"><h3>{title}</h3><p>{text}</p></article>)}</div></section>
     <section class="section prose"><span class="eyebrow">Technical design</span><h2>Root tooling as a deployment layer.</h2><p>{detail.architecture}</p><p>{detail.system}</p></section>
-    <section class="section"><span class="eyebrow">Supported targets</span><div class="tags">{['Magisk','KernelSU','APatch','Persian','Arabic','Apple Emoji','iOS 18.4','macOS 26'].map((tag) => <span class="tag">{tag}</span>)}</div></section>
+    <section class="section"><span class="eyebrow">Supported targets</span><div class="tags">{['14 Persian/Arabic fonts','2 Apple emoji packs','iOS 18.4','macOS 26'].map((tag) => <span class="tag">{tag}</span>)}</div></section>
     <section class="section prose"><span class="eyebrow">Design decision</span><h2>Don't modify the system partition.</h2><p>The main choice is to keep deployment systemless. The module applies the selected resources without requiring users to change the underlying system partition manually.</p></section>
-    <section class="section prose"><span class="eyebrow">What's next</span><h2>Compatibility and resource coverage.</h2><p>{detail.next}</p></section>
-    <section class="section"><div class="actions"><a class="button primary" href={project.github}>Explore the source</a><a class="button" href="/projects/">More projects</a></div></section>
+    <section class="section"><span class="eyebrow">Release history</span><h2>Changes over time.</h2><div class="release-list">{detail.releaseHistory.map(([version, text]) => <div><strong>{version}</strong><span>{text}</span></div>)}</div></section>
   </div>
 </BaseLayout>
