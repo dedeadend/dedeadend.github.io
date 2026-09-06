@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title="About">
+  <div class="container page">
+    <header class="page-header"><span class="eyebrow">About</span><h1>Android, systems, and useful tools.</h1><p>I build Android software with a focus on system-level behavior, performance, and practical UX.</p></header>
+    <section class="prose">
+      <p>My work is centered around small products that solve concrete problems. I prefer focused tools, predictable behavior, and interfaces that stay out of the way.</p>
+      <p>This site is where I keep my apps, projects, and future experiments in one place.</p>
+      <div class="actions"><a class="button primary" href={site.github}>GitHub</a><a class="button" href={site.email}>Email</a></div>
+    </section>
+  </div>
+</BaseLayout>

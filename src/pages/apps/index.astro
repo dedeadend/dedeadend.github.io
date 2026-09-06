@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { apps } from '../../data/site';
+---
+<BaseLayout title="Apps">
+  <div class="container page">
+    <header class="page-header"><span class="eyebrow">Apps</span><h1>Tools I build.</h1><p>Small Android utilities designed to do one thing well.</p></header>
+    <div class="grid">
+      {apps.map((app) => <article class="card"><span class="eyebrow">{app.status}</span><h3>{app.name}</h3><p>{app.description}</p><div class="tags">{app.tags.map((tag) => <span class="tag">{tag}</span>)}</div><div class="actions"><a class="button primary" href={`/apps/${app.slug}/`}>Details</a><a class="button" href={app.github}>GitHub</a></div></article>)}
+    </div>
+  </div>
+</BaseLayout>
