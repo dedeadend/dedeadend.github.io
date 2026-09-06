@@ -69,6 +69,9 @@ export const projectDetails = {
   dterminal: {
     eyebrow: 'Android Tool · Terminal',
     title: 'DTerminal',
+    version: 'v2.0',
+    github: 'https://github.com/dedeadend/DTerminal',
+    releases: 'https://github.com/dedeadend/DTerminal/releases',
     summary: 'An Android terminal with native shell execution and an embedded Python runtime.',
     overview: 'DTerminal is an Android terminal for developers and power users who need shell commands and Python on the device. It includes command history, script storage, root-capable execution, and a Python runtime.',
     problem: 'Android already exposes a shell, but using it as a development environment can require several separate tools. DTerminal brings command execution, persistent state, and scripting into one Android application.',
@@ -80,11 +83,18 @@ export const projectDetails = {
     ],
     architecture: 'The project evolved from MVVM toward MVI with Unidirectional Data Flow under Clean Architecture. Hilt handles dependency injection, while Coroutines and Flow are used for asynchronous shell, database, and runtime operations.',
     system: 'DTerminal sits between the Android application layer and the device shell. Process lifecycle, threading, and privileged access therefore form part of the application design rather than being hidden behind a standard SDK abstraction.',
-    next: 'Further work is focused on the terminal workflow, runtime support, and keeping the separation between UI state and command execution clear.'
+    releaseHistory: [
+      ['v2.0', 'Embedded Python 3.13 runtime, native py command, external Python script execution, multi-line text selection, expanded custom commands, MVI migration, and Android 11 minimum support.'],
+      ['v1.2', 'Added the def value to the font command, updated the GitHub repository link, and reduced terminal log spacing.'],
+      ['v1.1', 'Updated the terminal workflow and release fixes following the initial release.']
+    ]
   },
   evilfont: {
     eyebrow: 'System Module · Root',
     title: 'EvilFont',
+    version: 'v2.1',
+    github: 'https://github.com/dedeadend/EvilFont',
+    releases: 'https://github.com/dedeadend/EvilFont/releases',
     summary: 'A systemless font and emoji module for Magisk, KernelSU, and APatch.',
     overview: 'EvilFont changes Android fonts and emoji presentation without directly modifying the system partition. It is intended for rooted devices where system-level customization is part of the setup.',
     problem: 'Direct changes to system resources can make updates and recovery harder. A systemless module provides a way to apply the changes while keeping the underlying system partition unchanged.',
@@ -96,7 +106,12 @@ export const projectDetails = {
     ],
     architecture: 'The module uses a small structure with explicit installation choices and limited persistent state. The installer is designed for root and recovery environments where keyboard input may not be available.',
     system: 'The project operates at the root/module layer. Its main constraint is keeping the changes systemless so the original system partition remains untouched.',
-    next: 'Further work can focus on compatibility, installer behavior, and additional resource coverage while keeping the module reversible and narrow in scope.'
+    releaseHistory: [
+      ['v2.1', 'Added Vazirmatn_Round_Dots, updated Vazirmatn font files, and updated the macOS 26 emoji pack.'],
+      ['v2.0', 'Added the interactive installer, 13 open-source fonts, iOS 18.4 and macOS 26 emoji packs, modular selection, and replaced the legacy single-font pack.'],
+      ['v1.2', 'Optimized font files for performance and cleaned up unnecessary module files.'],
+      ['v1.1', 'Initial released module version.']
+    ]
   }
 };
 
