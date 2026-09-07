@@ -16,7 +16,7 @@ const featuredProject = projects.find((project) => project.featured) ?? projects
     </section>
 
     {featuredProject && featuredApp && <section class="section">
-      <div class="section-head"><div><span class="eyebrow">Featured project</span><h2>{featuredProject.name}</h2></div><a class="text-link" href="/projects/">All projects →</a></div>
+      <div class="section-head featured-head"><div><span class="eyebrow">Featured project</span><h2>{featuredProject.name}</h2></div><a class="text-link" href="/projects/">All projects →</a></div>
       <div class="featured">
         <article class="card"><h3>{featuredApp.tagline}</h3><p>{featuredApp.description}</p><div class="tags">{featuredApp.tags.map((tag) => <span class="tag">{tag}</span>)}</div><div class="actions"><a class="button primary" href={featuredProject.href}>View project</a><a class="button" href={featuredApp.github}>Source</a></div></article>
         <div class="meta"><div class="meta-row"><span>Version</span><strong>{featuredApp.version}</strong></div><div class="meta-row"><span>Access</span><strong>Root / Shizuku</strong></div><div class="meta-row"><span>Minimum Android</span><strong>{featuredApp.minAndroid}</strong></div><div class="meta-row"><span>License</span><strong>{featuredApp.license}</strong></div></div>
