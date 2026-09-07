@@ -7,7 +7,7 @@ import { projects } from '../../data/site';
     <header class="page-header"><span class="eyebrow">Projects · {projects.length}</span><h1>Things I build.</h1><p>Android applications, system tools, and projects that explore different parts of the platform.</p></header>
     <div class="grid project-list">
       {projects.map((project) => <a class="card project-card" href={project.href}>
-        <div class="project-card-top"><span class="eyebrow">{project.category}</span><span class="status">● {project.status}</span></div>
+        <div class="project-card-top"><span class="eyebrow">{project.category}</span><span class="status"><span class="status-dot"></span>{project.status}</span></div>
         <h2>{project.name}</h2><p>{project.description}</p>
         <div class="tags">{project.tags.map((tag) => <span class="tag">{tag}</span>)}</div>
         <div class="project-link">View details →</div>
