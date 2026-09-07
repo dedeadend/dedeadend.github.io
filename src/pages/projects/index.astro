@@ -8,20 +8,9 @@ import { projects } from '../../data/site';
     <div class="grid project-list">
       {projects.map((project) => <a class="card project-card" href={project.href}>
         <div class="project-card-visual">
-          {project.slug === 'killmyapps' && <svg class="project-icon" viewBox="0 0 108 108" role="img" aria-label="KillMyApps icon">
-            <rect width="108" height="108" rx="24" fill="#C0185A"/>
-            <g transform="translate(24.3 24.3) scale(0.55)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-              <circle cx="12" cy="12" r="2.2"/>
-              <g transform="rotate(30 12 12)"><path d="M12 9.5V4.5"/><path d="M9.5 2 12 4.5 14.5 2"/></g>
-              <g transform="rotate(90 12 12)"><path d="M12 9.5V4.5"/><path d="M9.5 2 12 4.5 14.5 2"/></g>
-              <g transform="rotate(150 12 12)"><path d="M12 9.5V4.5"/><path d="M9.5 2 12 4.5 14.5 2"/></g>
-              <g transform="rotate(210 12 12)"><path d="M12 9.5V4.5"/><path d="M9.5 2 12 4.5 14.5 2"/></g>
-              <g transform="rotate(270 12 12)"><path d="M12 9.5V4.5"/><path d="M9.5 2 12 4.5 14.5 2"/></g>
-              <g transform="rotate(330 12 12)"><path d="M12 9.5V4.5"/><path d="M9.5 2 12 4.5 14.5 2"/></g>
-            </g>
-          </svg>}
+          {project.slug === 'killmyapps' && <img class="project-icon" src="/icons/KillMyAppsIcon.svg" alt="KillMyApps icon" loading="lazy" />}
           {project.slug === 'dterminal' && <img class="project-icon" src="https://raw.githubusercontent.com/dedeadend/DTerminal/main/app/src/main/ic_launcher-playstore.png" alt="DTerminal icon" loading="lazy" />}
-          {project.slug === 'evilfont' && <span class="project-icon project-icon-crop" role="img" aria-label="EvilFont icon"></span>}
+          {project.slug === 'evilfont' && <img class="project-icon" src="/icons/EvilFontIcon.svg" alt="EvilFont icon" loading="lazy" />}
         </div>
         <div class="project-card-content">
           <div class="project-card-top"><span class="eyebrow">{project.category}</span><span class="status"><span class="status-dot"></span>{project.status}</span></div>
