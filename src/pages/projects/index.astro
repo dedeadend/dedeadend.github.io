@@ -8,9 +8,9 @@ import { projects } from '../../data/site';
     <div class="grid project-list">
       {projects.map((project) => <a class="card project-card" href={project.href}>
         <div class="project-card-visual">
-          {project.slug === 'killmyapps' && <img class="project-icon" src="/icons/KillMyAppsIcon.svg" alt="KillMyApps icon" loading="lazy" />}
-          {project.slug === 'dterminal' && <img class="project-icon" src="https://raw.githubusercontent.com/dedeadend/DTerminal/main/app/src/main/ic_launcher-playstore.png" alt="DTerminal icon" loading="lazy" />}
-          {project.slug === 'evilfont' && <img class="project-icon" src="/icons/EvilFontIcon.svg" alt="EvilFont icon" loading="lazy" />}
+          {project.slug === 'killmyapps' && <img class="project-icon" src="/images/projects/KillMyAppsIcon.png" alt="KillMyApps icon" loading="lazy" />}
+          {project.slug === 'dterminal' && <img class="project-icon" src="/images/projects/DTerminalIcon.png" alt="DTerminal icon" loading="lazy" />}
+          {project.slug === 'evilfont' && <img class="project-icon" src="/images/projects/EvilFontIcon.png" alt="EvilFont icon" loading="lazy" />}
         </div>
         <div class="project-card-content">
           <div class="project-card-top"><span class="eyebrow">{project.category}</span><span class="status"><span class="status-dot"></span>{project.status}</span></div>
