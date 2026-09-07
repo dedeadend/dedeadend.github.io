@@ -17,7 +17,7 @@ const { title = site.name, description = site.description } = Astro.props;
   <body>
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="/">DeDeadend</a>
+        <a class="brand" href="/"><img class="brand-avatar" src="https://github.com/dedeadend.png?size=96" alt="" width="28" height="28" />DeDeadend</a>
         <nav class="nav-links" aria-label="Main navigation">
           <a href="/projects/">Projects</a>
           <a href="/about/">About</a>
@@ -32,7 +32,7 @@ const { title = site.name, description = site.description } = Astro.props;
       </div>
     </footer>
     <script>
-      const revealItems = document.querySelectorAll('main .hero, main .page-header, main .section, main .card');
+      const revealItems = document.querySelectorAll('main .hero, main .page-header, main .section, main .card, main .project-banner');
 
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         revealItems.forEach((item, index) => {
