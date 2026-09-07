@@ -87,7 +87,8 @@ export const about = {
 
 export const experience = [
   { title: 'Barakatel', description: 'Android application development, implementation, and testing for publication on Myket.' },
-  { title: 'Maneshi Hamrah', description: 'An Android project for call and SMS automation using location and time filters.' },
+  { title: 'Monshi Hamrah', description: 'An Android project for call and SMS automation using location and time filters.' },
+  { title: 'MedYar', description: 'A medical assistant app where users can enter basic health information and add medical records using photos or the camera. It analyzes the collected information to summarize the status of different health areas and provide practical guidance on what to watch and what to do next.' },
   { title: 'Wall Crack Detection', description: 'A GAN-based machine learning project for generating and detecting wall cracks.' },
   { title: 'Teaching', description: 'More than 100 programming teaching sessions.' },
   { title: 'University Competitions', description: 'First place in three university-level competitions.' },
