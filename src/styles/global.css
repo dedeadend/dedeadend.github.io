@@ -45,7 +45,11 @@ h3 { font-size:1.18rem; }
 .card { padding:24px; background:linear-gradient(145deg,var(--surface),rgba(21,26,32,.72)); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); min-width:0; transition:border-color .25s ease,box-shadow .25s ease; }
 .card:hover { border-color:rgba(142,230,178,.28); box-shadow:0 26px 55px rgba(0,0,0,.26); }
 .card p { color:var(--muted); }
-.project-card { display:block; }
+.project-card { display:grid; grid-template-columns:112px minmax(0,1fr); gap:24px; align-items:start; }
+.project-card-visual { width:112px; height:112px; border-radius:24px; overflow:hidden; border:1px solid var(--border); background:var(--surface-2); box-shadow:0 14px 30px rgba(0,0,0,.18); }
+.project-icon { display:block; width:100%; height:100%; object-fit:cover; }
+.project-icon-crop { background-image:url('https://raw.githubusercontent.com/dedeadend/EvilFont/main/EvilFontBanner.png'); background-size:300% 300%; background-position:0% 20%; background-repeat:no-repeat; }
+.project-card-content { min-width:0; }
 .project-card h2 { margin-top:12px; }
 .project-card-top { display:flex; justify-content:space-between; align-items:center; gap:15px; }
 .status { color:var(--muted); font-size:.78rem; display:inline-flex; align-items:center; gap:7px; }
@@ -123,6 +127,9 @@ h3 { font-size:1.18rem; }
   .system-skills { gap:38px; }
   .screenshot-grid { grid-template-columns:1fr; gap:16px; }
   .project-banner { border-radius:14px; }
+  .project-card { grid-template-columns:80px minmax(0,1fr); gap:16px; }
+  .project-card-visual { width:80px; height:80px; border-radius:18px; }
+  .project-card-top { align-items:flex-start; }
 }
 @media (prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
