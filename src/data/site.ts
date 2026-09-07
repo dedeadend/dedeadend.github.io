@@ -86,7 +86,7 @@ export const about = {
 };
 
 export const experience = [
-  { title: 'Barakatel', description: 'Android application development, implementation, and testing for publication on Myket.' },
+  { title: 'Barakatel', description: 'An Android application developed for the National Health Counselor Center (4030) to facilitate communication between physicians and patients.' },
   { title: 'Monshi Hamrah', description: 'An Android project for call and SMS automation using location and time filters.' },
   { title: 'MedYar', description: 'A medical assistant app where users can enter basic health information and add medical records using photos or the camera. It analyzes the collected information to summarize the status of different health areas and provide practical guidance on what to watch and what to do next.' },
   { title: 'Wall Crack Detection', description: 'A GAN-based machine learning project for generating and detecting wall cracks.' },
