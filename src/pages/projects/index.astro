@@ -4,7 +4,7 @@ import { projects } from '../../data/site';
 ---
 <BaseLayout title="Projects">
   <div class="container page">
-    <header class="page-header"><span class="eyebrow">Projects · {projects.length}</span><h1>Things I build.</h1><p>Android applications, system tools, and projects that explore different parts of the platform.</p></header>
+    <header class="page-header"><span class="eyebrow">Projects · {projects.length}</span><h1>Selected projects.</h1><p>Android applications, system tools, and experiments spanning application code, automation, and system integration.</p></header>
     <div class="grid project-list">
       {projects.map((project) => <a class="card project-card" href={project.href}>
         <div class="project-card-visual">
@@ -21,12 +21,12 @@ import { projects } from '../../data/site';
       </a>)}
     </div>
     <section class="section split-section">
-      <div><span class="eyebrow">Engineering focus</span><h2>Working close to the platform.</h2></div>
-      <div class="prose"><p>These projects cover areas I spend time on: Android UI and architecture, system-level access, Root and Shizuku integration, native tooling, automation, and performance.</p><p>I tend to prefer smaller tools where the architecture supports the product rather than becoming a goal by itself.</p></div>
+      <div><span class="eyebrow">Engineering focus</span><h2>Closer to the platform.</h2></div>
+      <div class="prose"><p>The projects cover different layers of Android, from Compose and application architecture to Root, Shizuku, native execution, automation, and performance.</p><p>The common thread is practical tooling: each project starts with a specific problem and keeps its implementation tied to that use case.</p></div>
     </section>
     <section class="section split-section">
-      <div><span class="eyebrow">Across the stack</span><h2>Application to system.</h2></div>
-      <div class="prose"><p>Depending on the project, I work with Kotlin and Compose at the application layer, or C/C++, Python, Bash, Root modules, and Android system interfaces when deeper access is needed.</p></div>
+      <div><span class="eyebrow">Across the stack</span><h2>Different tools for different layers.</h2></div>
+      <div class="prose"><p>Depending on the problem, I use Kotlin and Compose, C/C++, Python, Bash, Android SDK/NDK APIs, or system-level interfaces. The choice follows the requirements of the project rather than a fixed stack.</p></div>
     </section>
   </div>
 </BaseLayout>
