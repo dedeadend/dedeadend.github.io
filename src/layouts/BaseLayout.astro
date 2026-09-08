@@ -4,6 +4,8 @@ import { site } from '../data/site';
 
 interface Props { title?: string; description?: string; }
 const { title = site.name, description = site.description } = Astro.props;
+const pageTitle = title === 'DeDeadend' ? `${site.name} · ${site.role}` : `${title} · ${site.name}`;
+const canonicalUrl = new URL(Astro.url.pathname, 'https://dedeadend.github.io').href;
 ---
 <!doctype html>
 <html lang="en">
@@ -11,8 +13,23 @@ const { title = site.name, description = site.description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} · {site.role}</title>
+    <meta name="author" content={site.name} />
+    <meta name="theme-color" content="#0b0d10" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/png" href="/images/projects/EvilFontIcon.png" />
+    <link rel="apple-touch-icon" href="/images/projects/EvilFontIcon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="DeDeadend" />
+    <meta property="og:image" content="https://dedeadend.github.io/images/projects/EvilFontIcon.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://dedeadend.github.io/images/projects/EvilFontIcon.png" />
+    <title>{pageTitle}</title>
   </head>
   <body>
     <header class="site-header">
