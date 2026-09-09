@@ -60,17 +60,17 @@ export const projectDetails = {
   },
   evilfont: {
     eyebrow: 'System Module · Root', title: 'EvilFont', version: 'v2.1', github: 'https://github.com/dedeadend/EvilFont', releases: 'https://github.com/dedeadend/EvilFont/releases',
-    summary: 'A systemless font and emoji module for Magisk, KernelSU, and APatch.',
-    overview: 'EvilFont changes Android system fonts and emoji presentation through a root module instead of modifying the system partition directly. The module targets rooted devices where system-level visual customization is part of the setup.',
-    problem: 'System resource changes are easier to manage when the original system partition stays untouched. EvilFont uses a systemless overlay so the selected resources can be applied without turning the change into a permanent system modification.',
+    summary: 'A font and emoji module for rooted Android devices, supporting Magisk, KernelSU, and APatch.',
+    overview: 'EvilFont lets rooted Android users customize system fonts and emoji with an interactive installer. It focuses on a small set of visual resources and keeps the selection process inside the module installation flow.',
+    problem: 'Changing system fonts and emoji can involve manual resource replacement and repeated setup. EvilFont packages the available resources into a guided installer so the user can choose what to apply during installation.',
     approach: [
-      ['Systemless deployment', 'Apply the selected resources through the supported root module mechanisms rather than editing the system partition.'],
+      ['Interactive installer', 'Use the device volume keys to move through the installer and confirm selections without relying on a keyboard or touch input.'],
       ['Multiple root platforms', 'Support Magisk, KernelSU, and APatch for different rooted Android environments.'],
-      ['Interactive installer', 'Use a volume-key-driven installer so module choices can be made in root or recovery environments without keyboard input.'],
-      ['Scoped customization', 'Keep the module focused on fonts and emoji resources instead of adding unrelated system modifications.']
+      ['Modular selection', 'Choose a font, an Apple emoji pack, or both in the same installation flow.'],
+      ['Curated resources', 'Include 14 Persian and Arabic font variants together with iOS 18.4 and macOS 26 Apple emoji packs.']
     ],
-    architecture: 'The module keeps installation logic explicit and lightweight, with selection handled during installation rather than through a persistent application UI. This fits the environments where the module is actually deployed.',
-    system: 'EvilFont operates at the root/module layer. The main design constraint is to expose the chosen resources without altering the original system partition.',
+    architecture: 'The installer keeps the selection logic in the module setup flow instead of requiring a separate application UI. Volume-key navigation makes the same interaction available on devices where keyboard input is not practical.',
+    system: 'EvilFont works through the root module layer and applies the selected font and emoji resources to the Android environment. Reinstalling the module lets the user make a different selection later.',
     releaseHistory: [
       ['v2.1', 'Added Vazirmatn_Round_Dots, updated Vazirmatn font files, and updated the macOS 26 emoji pack.'],
       ['v2.0', 'Added the interactive installer, 13 open-source fonts, iOS 18.4 and macOS 26 emoji packs, modular selection, and replaced the legacy single-font pack.'],
