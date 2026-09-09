@@ -28,7 +28,7 @@ export const apps = [
 
 export const projects = [
   {
-    slug: 'killmyapps', name: 'KillMyApps', description: 'A focused Android utility for terminating selected applications through Root or Shizuku.', href: '/apps/killmyapps/', external: false, featured: true, status: 'Active', category: 'Android Utility', github: 'https://github.com/dedeadend/KillMyApps', tags: ['Android', 'Root', 'Shizuku', 'Open Source']
+    slug: 'killmyapps', name: 'KillMyApps', description: 'A focused Android utility for terminating selected applications through Root or Shizuku.', href: '/projects/killmyapps/', external: false, featured: true, status: 'Active', category: 'Android Utility', github: 'https://github.com/dedeadend/KillMyApps', tags: ['Android', 'Root', 'Shizuku', 'Open Source']
   },
   {
     slug: 'dterminal', name: 'DTerminal', description: 'An Android terminal with native shell execution and an embedded Python runtime.', href: '/projects/dterminal/', external: false, featured: false, status: 'Active', category: 'Android Tool', github: 'https://github.com/dedeadend/DTerminal', tags: ['Android', 'Python', 'Compose', 'Terminal']
