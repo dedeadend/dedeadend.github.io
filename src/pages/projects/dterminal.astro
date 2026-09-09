@@ -10,13 +10,23 @@ const detail = projectDetails.dterminal;
     <header class="page-header project-detail-header"><span class="eyebrow">{detail.eyebrow}</span><h1>{detail.title}</h1><p>{detail.summary}</p><div class="actions"><a class="button primary" href={project.github}>View on GitHub</a></div></header>
     <figure class="project-banner"><img src="https://raw.githubusercontent.com/dedeadend/DTerminal/main/screenshots/DTerminalBanner.png" alt="DTerminal banner" loading="eager" /></figure>
     <section class="detail-intro"><div class="detail-stat"><strong>{detail.version}</strong><span>Version</span></div><div class="detail-stat"><strong>Android 11+</strong><span>Minimum version</span></div><div class="detail-stat"><strong>Python 3.13</strong><span>Embedded runtime</span></div><div class="detail-stat"><strong>Clean + MVI</strong><span>Architecture</span></div></section>
-    <section class="section prose"><span class="eyebrow">Overview</span><h2>A terminal built for Android.</h2><p>{detail.overview}</p></section>
-    <section class="section prose"><span class="eyebrow">Why it exists</span><h2>Shell and scripting without a separate setup.</h2><p>{detail.problem}</p></section>
-    <section class="section"><span class="eyebrow">Implementation</span><h2>The pieces behind the workflow.</h2><div class="grid">{detail.approach.map(([title, text]) => <article class="card"><h3>{title}</h3><p>{text}</p></article>)}</div></section>
-    <section class="section prose"><span class="eyebrow">Architecture</span><h2>State and execution stay separate.</h2><p>{detail.architecture}</p></section>
-    <section class="section prose"><span class="eyebrow">System integration</span><h2>Working with the Android shell.</h2><p>{detail.system}</p></section>
+
+    <section class="section prose"><span class="eyebrow">Overview</span><h2>Android terminal with Python.</h2><p>{detail.overview}</p></section>
+
+    <section class="section"><span class="eyebrow">Features</span><h2>The main tools.</h2><div class="grid">
+      {detail.approach.map(([title, text]) => <article class="card"><h3>{title}</h3><p>{text}</p></article>)}
+      <article class="card"><h3>Multi-line execution</h3><p>Run multiple shell or Python statements together as one execution block.</p></article>
+      <article class="card"><h3>Command history</h3><p>Keep previously executed commands available through a persistent history.</p></article>
+      <article class="card"><h3>Custom commands</h3><p>Use built-in utilities for system information, text processing, encoding, and developer tasks.</p></article>
+      <article class="card"><h3>Terminal customization</h3><p>Adjust font size and terminal text colors from the application.</p></article>
+    </div></section>
+
+    <section class="section prose"><span class="eyebrow">How It Works</span><h2>Shell and Python in one workspace.</h2><p>Standard shell commands run through the Android shell. When root access is needed, the terminal can be switched to Root mode from the three-dot menu, after which commands are executed with root privileges.</p><p>Python runs through the embedded Python 3.13 runtime. The <code>py</code> trigger switches an execution block to Python, while saved scripts can be executed with command-line arguments. Pure-Python packages can also be installed from PyPI at runtime.</p></section>
+
+    <section class="section prose"><span class="eyebrow">Technical Details</span><h2>Built around Android's runtime.</h2><p>{detail.architecture}</p><p>{detail.system}</p></section>
+
     <section class="section screenshots-section"><span class="eyebrow">Screenshots</span><h2>Terminal, scripts, and history.</h2><div class="screenshot-grid"><figure><img src="https://raw.githubusercontent.com/dedeadend/DTerminal/main/screenshots/DTerminalScript.png" alt="DTerminal script workspace" loading="lazy" /></figure><figure><img src="https://raw.githubusercontent.com/dedeadend/DTerminal/main/screenshots/DTerminalHistory.png" alt="DTerminal command history" loading="lazy" /></figure></div></section>
-    <section class="section prose"><span class="eyebrow">Design decision</span><h2>Use Android as the environment.</h2><p>The application treats touch input, lifecycle, persistent state, runtime management, and asynchronous execution as first-class Android concerns rather than adapting a desktop terminal model to a smaller screen.</p></section>
+
     <section class="section"><span class="eyebrow">Release history</span><h2>Version history.</h2><div class="release-list">{detail.releaseHistory.map(([version, text]) => <div><strong>{version}</strong><span>{text}</span></div>)}</div></section>
   </div>
 </BaseLayout>
