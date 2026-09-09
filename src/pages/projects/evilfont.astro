@@ -10,12 +10,17 @@ const detail = projectDetails.evilfont;
     <header class="page-header project-detail-header"><span class="eyebrow">{detail.eyebrow}</span><h1>{detail.title}</h1><p>{detail.summary}</p><div class="actions"><a class="button primary" href={project.github}>View on GitHub</a></div></header>
     <figure class="project-banner"><img src="https://raw.githubusercontent.com/dedeadend/EvilFont/main/EvilFontBanner.png" alt="EvilFont banner" loading="eager" /></figure>
     <section class="detail-intro"><div class="detail-stat"><strong>{detail.version}</strong><span>Version</span></div><div class="detail-stat"><strong>Systemless</strong><span>Deployment model</span></div><div class="detail-stat"><strong>14 fonts</strong><span>Persian / Arabic</span></div><div class="detail-stat"><strong>2 Apple emoji</strong><span>iOS 18.4 / macOS 26</span></div></section>
-    <section class="section prose"><span class="eyebrow">Overview</span><h2>Fonts and emoji at the module layer.</h2><p>{detail.overview}</p></section>
-    <section class="section prose"><span class="eyebrow">Why it exists</span><h2>Apply system resources without editing the system partition.</h2><p>{detail.problem}</p></section>
-    <section class="section"><span class="eyebrow">Implementation</span><h2>The module structure.</h2><div class="grid">{detail.approach.map(([title, text]) => <article class="card"><h3>{title}</h3><p>{text}</p></article>)}</div></section>
-    <section class="section prose"><span class="eyebrow">Technical design</span><h2>Installation built around the root environment.</h2><p>{detail.architecture}</p><p>{detail.system}</p></section>
+
+    <section class="section prose"><span class="eyebrow">Overview</span><h2>Fonts and emoji through a root module.</h2><p>{detail.overview}</p></section>
+
+    <section class="section"><span class="eyebrow">Features</span><h2>The module at a glance.</h2><div class="grid">{detail.approach.map(([title, text]) => <article class="card"><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+
+    <section class="section prose"><span class="eyebrow">How It Works</span><h2>Installation through the root environment.</h2><p>EvilFont is installed as a systemless module through Magisk, KernelSU, or APatch. During installation, the interactive installer uses the device's volume keys to let you select the resources to apply.</p><p>You can install fonts, Apple emoji, or both. The selected resources are then exposed through the module environment without directly modifying the original system partition.</p><p>To change the selection later, reinstall the module and make a new selection.</p></section>
+
     <section class="section"><span class="eyebrow">Included resources</span><h2>Fonts and Apple emoji.</h2><div class="grid"><article class="card"><h3>Persian / Arabic fonts</h3><p>14 font variants are included in the module.</p></article><article class="card"><h3>Apple emoji</h3><p>2 Apple emoji packs are included, covering iOS 18.4 and macOS 26.</p></article></div></section>
-    <section class="section prose"><span class="eyebrow">Design decision</span><h2>Leave the system partition untouched.</h2><p>The module applies its resources through the root framework instead of writing directly to the original system files. That keeps the customization separate from the underlying system installation.</p></section>
+
+    <section class="section prose"><span class="eyebrow">Technical Details</span><h2>Focused on systemless customization.</h2><p>{detail.architecture}</p><p>{detail.system}</p></section>
+
     <section class="section"><span class="eyebrow">Release history</span><h2>Version history.</h2><div class="release-list">{detail.releaseHistory.map(([version, text]) => <div><strong>{version}</strong><span>{text}</span></div>)}</div></section>
   </div>
 </BaseLayout>
