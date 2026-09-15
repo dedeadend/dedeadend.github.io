@@ -14,13 +14,13 @@ export const apps = [
     slug: 'killmyapps',
     name: 'KillMyApps',
     tagline: 'A focused Android utility for terminating selected applications.',
-    description: 'KillMyApps provides a direct way to terminate selected Android applications through Root or Shizuku. The project is intentionally centered on process termination rather than broader device or app management.',
+    description: 'KillMyApps provides a direct way to terminate selected Android applications through Root or Shizuku. The project is intentionally centered on process termination, with filtering, automation, widgets, and Quick Settings built around the same workflow.',
     status: 'Active',
     featured: true,
     github: 'https://github.com/dedeadend/KillMyApps',
     download: 'https://github.com/dedeadend/KillMyApps/releases/latest',
-    version: 'v1.5',
-    minAndroid: 'Android 8.0+',
+    version: 'v1.6',
+    minAndroid: 'Android 9.0+',
     license: 'GPL-3.0',
     tags: ['Android', 'Root', 'Shizuku', 'Open Source']
   }
