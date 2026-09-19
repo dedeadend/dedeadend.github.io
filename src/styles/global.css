@@ -136,7 +136,7 @@ h3 { font-size:1.18rem; }
   .screenshot-grid { grid-template-columns:1fr; gap:16px; }
   .project-banner { border-radius:14px; }
   .project-card { grid-template-columns:80px minmax(0,1fr); gap:16px; }
-  .project-card-visual { width:80px; height:80px; border-radius:18px; }
+  .project-card-visual { width:72px; height:72px; border-radius:16px; }
   .project-detail-heading { grid-template-columns:88px minmax(0,1fr); gap:16px; }
   .project-detail-icon { width:72px; height:72px; flex-basis:72px; border-radius:16px; }
   .project-card-top { align-items:flex-start; }
