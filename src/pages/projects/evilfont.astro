@@ -7,7 +7,7 @@ const detail = projectDetails.evilfont;
 <BaseLayout title="EvilFont" description={detail.summary}>
   <div class="container page">
     <p><a class="back-link" href="/projects/">← Projects</a></p>
-    <header class="page-header project-detail-header"><div class="project-detail-heading"><div class="project-detail-icon"><img class="project-icon" src="/images/projects/EvilFontIcon.png" alt="EvilFont icon" loading="eager" /></div><div><span class="eyebrow">{detail.eyebrow}</span><h1>{detail.title}</h1><p>{detail.summary}</p></div></div><div class="actions"><a class="button primary" href={project.github}>View on GitHub</a></div></header>
+    <header class="page-header project-detail-header"><span class="eyebrow">{detail.eyebrow}</span><div class="project-detail-heading"><div class="project-detail-icon"><img class="project-icon" src="/images/projects/EvilFontIcon.png" alt="EvilFont icon" loading="eager" /></div><h1>{detail.title}</h1></div><p>{detail.summary}</p><div class="actions"><a class="button primary" href={project.github}>View on GitHub</a></div></header>
     <figure class="project-banner"><img src="https://raw.githubusercontent.com/dedeadend/EvilFont/main/EvilFontBanner.png" alt="EvilFont banner" loading="eager" /></figure>
     <section class="detail-intro"><div class="detail-stat"><strong>{detail.version}</strong><span>Version</span></div><div class="detail-stat"><strong>Systemless</strong><span>Deployment model</span></div><div class="detail-stat"><strong>14 fonts</strong><span>Persian / Arabic</span></div><div class="detail-stat"><strong>2 Apple emoji</strong><span>iOS 18.4 / macOS 26</span></div></section>
 
