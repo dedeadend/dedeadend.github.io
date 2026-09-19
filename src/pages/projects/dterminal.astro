@@ -7,7 +7,7 @@ const detail = projectDetails.dterminal;
 <BaseLayout title="DTerminal" description={detail.summary}>
   <div class="container page">
     <p><a class="back-link" href="/projects/">← Projects</a></p>
-    <header class="page-header project-detail-header"><span class="eyebrow">{detail.eyebrow}</span><h1>{detail.title}</h1><p>{detail.summary}</p><div class="actions"><a class="button primary" href={project.github}>View on GitHub</a></div></header>
+    <header class="page-header project-detail-header"><div class="project-detail-heading"><div class="project-detail-icon"><img class="project-icon" src="/images/projects/DTerminalIcon.png" alt="DTerminal icon" loading="eager" /></div><div><span class="eyebrow">{detail.eyebrow}</span><h1>{detail.title}</h1><p>{detail.summary}</p></div></div><div class="actions"><a class="button primary" href={project.github}>View on GitHub</a></div></header>
     <figure class="project-banner"><img src="https://raw.githubusercontent.com/dedeadend/DTerminal/main/screenshots/DTerminalBanner.png" alt="DTerminal banner" loading="eager" /></figure>
     <section class="detail-intro"><div class="detail-stat"><strong>{detail.version}</strong><span>Version</span></div><div class="detail-stat"><strong>Android 11+</strong><span>Minimum version</span></div><div class="detail-stat"><strong>Python 3.13</strong><span>Embedded runtime</span></div><div class="detail-stat"><strong>Clean + MVI</strong><span>Architecture</span></div></section>
 
