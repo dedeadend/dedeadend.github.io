@@ -50,7 +50,7 @@ h3 { font-size:1.18rem; }
 .card p { color:var(--muted); }
 .project-card { display:grid; grid-template-columns:112px minmax(0,1fr); gap:24px; align-items:start; }
 .project-card-visual { width:112px; height:112px; border-radius:24px; overflow:hidden; border:1px solid var(--border); background:var(--surface-2); box-shadow:0 14px 30px rgba(0,0,0,.18); }
-.project-icon { display:block; width:100%; height:100%; object-fit:contain; }
+.project-icon { display:block; width:100%; height:100%; object-fit:cover; }
 .project-icon-crop { background-image:url('https://raw.githubusercontent.com/dedeadend/EvilFont/main/EvilFontBanner.png'); background-size:300% 300%; background-position:0% 20%; background-repeat:no-repeat; }
 .project-card-content { min-width:0; }
 .project-card h2 { margin-top:12px; }
@@ -136,7 +136,7 @@ h3 { font-size:1.18rem; }
   .screenshot-grid { grid-template-columns:1fr; gap:16px; }
   .project-banner { border-radius:14px; }
   .project-card { grid-template-columns:80px minmax(0,1fr); gap:16px; }
-  .project-card-visual { width:80px; height:80px; border-radius:18px; }
+  .project-card-visual { width:80px; height:80px; padding:5px; border-radius:18px; }
   .project-detail-heading { grid-template-columns:88px minmax(0,1fr); gap:16px; }
   .project-detail-icon { width:88px; height:88px; border-radius:20px; }
   .project-card-top { align-items:flex-start; }
